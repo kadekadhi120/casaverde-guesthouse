@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1a4f2b" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#123" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g)"/>
+  <text x="80" y="220" font-size="72" fill="#E6F4EA" font-family="Arial, Helvetica, sans-serif">Casa Verde Guest House</text>
+  <text x="80" y="320" font-size="48" fill="#F6E7A9" font-family="Arial, Helvetica, sans-serif">Travel effortlessly</text>
+</svg>
