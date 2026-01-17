@@ -34,4 +34,24 @@
     </main>
 
 </body>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            const mainContainer = document.querySelector('main');
+
+            if (targetElement && mainContainer) {
+                // Hitung posisi elemen di dalam main container
+                const topPos = targetElement.offsetTop - 80; // 80px offset untuk navbar
+
+                mainContainer.scrollTo({
+                    top: topPos,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
 </html>

@@ -2,12 +2,17 @@
 
 namespace App\Models;
 
+// 1. Tambahkan dua baris import ini untuk Filament
+use Filament\Models\Contracts\FilamentUser;
+use Filament\Panel;
+
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+// 2. Tambahkan "implements FilamentUser" di baris ini
+class User extends Authenticatable implements FilamentUser
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
@@ -21,6 +26,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'google_id',   
+        'facebook_id', 
+        'role_id', // Kita akan pakai ini untuk pengecekan
     ];
 
     /**
@@ -44,5 +52,11 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    // 3. Tambahkan fungsi wajib ini untuk keamanan Filament
+    public function canAccessPanel(Panel $panel): bool
+    {
+        return $this->role_id === 1;
     }
 }

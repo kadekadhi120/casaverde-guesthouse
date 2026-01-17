@@ -62,10 +62,20 @@
                 </div>
             </div>
 
-            <div class="w-2/4 h-full bg-[#d9d9d9] rounded-3xl overflow-hidden relative group">
-                <div class="absolute inset-0 flex items-center justify-center text-gray-500 font-medium">
-                    Map Area
-                </div>
+            <div class="w-2/4 h-full bg-gray-200 rounded-3xl overflow-hidden relative group shadow-lg">
+                <iframe 
+                    width="100%" 
+                    height="100%" 
+                    frameborder="0" 
+                    scrolling="no" 
+                    marginheight="0" 
+                    marginwidth="0" 
+                    src="https://maps.google.com/maps?q=Jl. Raya Abianbase No.124,+Abianbase,+Kec.+Mengwi,+Kabupaten+Badung,+Bali+80351&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    class="absolute inset-0 w-full h-full filter grayscale hover:grayscale-0 transition duration-500"
+                >
+                </iframe>
+
+                <div class="absolute inset-0 bg-[#003703]/10 pointer-events-none group-hover:bg-transparent transition duration-300"></div>
             </div>
 
             <div class="w-1/4 h-full flex flex-col justify-center pl-4 text-white">

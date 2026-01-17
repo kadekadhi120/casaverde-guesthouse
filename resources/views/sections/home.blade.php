@@ -1,7 +1,6 @@
 <section
   id="home"
   class="h-[100dvh] w-full snap-start relative flex flex-col overflow-hidden bg-cover bg-center"
-  style="background-image: url('{{ asset('images/banner.jpg') }}')"
 >
     <div class="absolute inset-0 bg-black/40 z-0"></div>
 
@@ -19,21 +18,34 @@
         </div>
     </div>
 
-    <div class="w-full shrink-0 z-20 bg-[#1a3c26] text-white py-6 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-4 border-t border-white/10">
+    <div class="relative bg-[#003703] py-6 px-10 text-xs text-gray-400 flex justify-between items-center">
+        <div class="w-1/4 text-xl leading-tight">
+            <p>From your stay, your plans, to your experiences <br> everything handled in one step.</p>
+        </div>
         
-        <div class="text-2xs md:text-sm font-light opacity-90 max-w-xs text-center md:text-left">
-            <p>From your stay, your plans, to your experiences everything handled in one step.</p>
+        <div class="absolute left-1/2 -translate-x-1/2 flex gap-12">
+            <img src="{{ asset('images/agoda.png') }}" class="h-10 opacity-50">
+            <img src="{{ asset('images/traveloka.png') }}" class="h-10 opacity-50">
+            <img src="{{ asset('images/booking.png') }}" class="h-10 opacity-50">
         </div>
 
-        <div class="flex gap-8 items-center grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-500">
-            <img src="{{ asset('images/agoda.png') }}" class="h-5 md:h-6 w-auto">
-            <img src="{{ asset('images/traveloka.png') }}" class="h-5 md:h-6 w-auto">
-            <img src="{{ asset('images/booking.png') }}" class="h-5 md:h-6 w-auto">
-        </div>
-
-        <div class="text-xs md:text-sm font-light opacity-90 text-center md:text-right">
+        <div class="text-xs md:text-sm opacity-90 font-light text-center md:text-right">
             <p>Book now! Travel effortlessly.</p>
         </div>
-
     </div>
 </section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Cari elemen tombol home berdasarkan href-nya
+        const homeBtn = document.querySelector('a[href="#home"]');
+        
+        // Jika tombol ketemu, klik otomatis
+        if (homeBtn) {
+            // Beri sedikit jeda (100ms) agar browser siap dulu
+            setTimeout(() => {
+                homeBtn.click();
+            }, 100);
+        }
+    });
+</script>
