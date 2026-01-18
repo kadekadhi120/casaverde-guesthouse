@@ -57,7 +57,6 @@ class ReviewResource extends Resource
             'index' => ListReviews::route('/'),
             'create' => CreateReview::route('/create'),
             'view' => ViewReview::route('/{record}'),
-            'edit' => EditReview::route('/{record}/edit'),
         ];
     }
 }

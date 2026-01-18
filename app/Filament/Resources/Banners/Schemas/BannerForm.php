@@ -21,8 +21,7 @@ class BannerForm
                     ->disk('public')
                     ->directory('Banner-videos') 
                     ->acceptedFileTypes(['video/mp4', 'video/quicktime']) 
-                    ->maxSize(100 * 1024)
-                    ->preserveFilenames()
+                    ->maxSize(512000)
                     ->columnSpanFull(),
             ]);
     }
